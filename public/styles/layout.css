@@ -3,8 +3,10 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
 html {
   box-sizing: border-box;
+  
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -14,10 +16,70 @@ html {
  * Global layout stuff
  */
 
+
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: 'Source Sans Pro';
+ 
+}
+
+.container {
+  width: 90%;
+  background-color: #f4f1ec;
+  margin: auto;
+}
+
+
+
+/* old Tweets */
+
+.article-tweet-header {
+  border: solid #545149 0.2em;
+  padding: 1em;
+  margin-bottom: 1em;
+  flex-direction: column;
+}
+
+.article-tweet-header:hover {
+  box-shadow: 10px 10px 2px 1px 
+  rgba(0, 0, 255, 0.1);
+}
+
+.article-tweet-header footer {
+  display: flex;
+}
+
+.user {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+#profile {
+  margin-right: 0.5em;
+}
+
+#userId {
+  color: lightgrey;
+}
+
+footer {
+  justify-content: space-between;
+  font-size: 0.8em;
+  border-top: solid 0.2em;
+  padding-top: 0.7em;
+}
+
+.customButton {
+  border: none;
+  color: #4056A1;
+  font-size: 1.1em;
+}
+
+.customButton:hover {
+  color: #F5c225
 }
 
 /*
