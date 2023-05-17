@@ -1,4 +1,4 @@
-"use strict";
+"use strict"; // what is this?
 
 // Basic express setup:
 
