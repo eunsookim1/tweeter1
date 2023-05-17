@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+
 <html lang="en">
   <head>
     <!-- Meta Information -->
@@ -7,23 +9,114 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+
+    <!-- For Font-Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <span class="logo">tweeter</span>
+      <div class="container1">
+        <span class="tweet"><strong>Write</strong> a new tweet</span>
+        <span class="fa-solid fa-angles-down" id="arrow"></span>
+      </div>
     </nav>
 
+    <header>
+        <div class="profile" >
+          <img src="/images/profile-hex.png"> 
+       </div>
+       <br>
+        <div class="name">
+          <h2>Eunsoo Kim</h2>
+        </div>
+    </header>
+
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form method="POST" action="/tweets">
+          <div class="input">
+          <label for="tweet-text"><strong>What are you humming about?</strong></label>
+          <textarea name="text" id="tweet-text" placeholder="Tweet here!"></textarea>
+          </div>
+
+          <div class="buttonCounter">
+            <button class="tweetSubmit" type="submit">Tweet</button>
+            
+        
+            <div id="character-counter">
+            <output name="counter" class="counter" for="tweet-text" id="counter">140</output>
+            
+            </div>
+          
+          </article>
+        </div>
+      </form> 
+    </form>
+    
+  </section>
+  
+  <br>
+
+</form>
+
+<section class="article-tweet-header">
+  <form method="POST" action="/tweets">
+    <h3 class="user">
+      <span>
+        <i class="fa-regular fa-user" id="profile"></i>
+        <span class="userName">Newton</span>
+      </span>
+        <span id="userId">@SrIssac</span>
+    </h3>
+    
+      <p class="oldTweet">If I have seen further it is by standing on the shoulders of giants</p>
+      <footer>
+        <div>10 days ago</div>
+
+        <div>
+          <button type="submit" class="customButton">
+            <i class="fa-solid fa-flag"></i>
+          </button>
+          </span>
+          <button type="submit" class="customButton">
+            <i class="fa-solid fa-retweet"></i>
+          </button>
+          <button type="submit" class="customButton">
+            <i class="fa-solid fa-heart"></i>
+          </button>
+        </div>
+
+      </footer>
+    </article>
+  </form>
+</section>
+
+
+</form>
+</main>
+
   </body>
 </html>
