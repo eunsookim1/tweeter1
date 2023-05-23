@@ -31,8 +31,9 @@ body {
   margin: auto;
 }
 
-
-
+p {
+  margin-bottom: 0.5em;
+}
 /* old Tweets */
 
 .article-tweet-header {
@@ -54,14 +55,24 @@ body {
 .user {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin: 0.2em;
 }
 
+.iconName {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  margin-right: 0.5em;
+}
 
 #profile {
   margin-right: 0.5em;
 }
 
-#userId {
+#user {
   color: lightgrey;
 }
 
@@ -72,7 +83,7 @@ footer {
   padding-top: 0.7em;
 }
 
-.customButton {
+.customButton  {
   border: none;
   color: #4056A1;
   font-size: 1.1em;
@@ -82,6 +93,16 @@ footer {
   color: #F5c225
 }
 
+.error-message {
+  color: red;
+  font-size: 1em;
+  font-weight: bold;
+  border: solid red 4px;
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+  padding: 0.5em;
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
