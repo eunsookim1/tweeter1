@@ -12,10 +12,10 @@ The project allows users to tweet in real-time with AJAX without having to refre
 ## Final Product
 
 Below is the desktopview for the app (screen max width of 767px).
-![desktop](https://github.com/eunsookim1/tweeter1/blob/master/docs/mobileview.png)
+![desktop](https://github.com/eunsookim1/tweeter1/blob/master/docs/pcview.png)
 
 Upon altering the size of the screen (screen min width of 768px), the app's design outlook changes for easier view for users.
-![mobile](./docs/mobileview.png)
+![mobile](https://github.com/eunsookim1/tweeter1/blob/master/docs/mobileview.png)
 
 ## Dependencies
 
