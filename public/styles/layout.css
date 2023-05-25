@@ -3,30 +3,27 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
-
 html {
   box-sizing: border-box;
-  
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 /*
  * Global layout stuff
  */
-
-
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: 'Source Sans Pro';
- 
+  font-family: "Source Sans Pro";
 }
 
 .container {
-  width: 90%;
   background-color: #f4f1ec;
   margin: auto;
 }
@@ -34,8 +31,8 @@ body {
 p {
   margin-bottom: 0.5em;
 }
-/* old Tweets */
 
+/* old Tweets */
 .article-tweet-header {
   border: solid #545149 0.2em;
   padding: 1em;
@@ -44,8 +41,7 @@ p {
 }
 
 .article-tweet-header:hover {
-  box-shadow: 10px 10px 2px 1px 
-  rgba(0, 0, 255, 0.1);
+  box-shadow: 10px 10px 2px 1px rgba(0, 0, 255, 0.1);
 }
 
 .article-tweet-header footer {
@@ -83,14 +79,14 @@ footer {
   padding-top: 0.7em;
 }
 
-.customButton  {
+.customButton {
   border: none;
-  color: #4056A1;
+  color: #4056a1;
   font-size: 1.1em;
 }
 
 .customButton:hover {
-  color: #F5c225
+  color: #f5c225;
 }
 
 .error-message {
@@ -103,6 +99,7 @@ footer {
   margin: 1em;
   padding: 0.5em;
 }
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
