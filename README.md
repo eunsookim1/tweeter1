@@ -9,6 +9,8 @@ The project allows users to tweet in real-time with AJAX without having to refre
 
 ## Features
 
+User can see previous tweets from the back-server.
+
 ## Final Product
 
 Below is the desktopview for the app (screen max width of 767px).
