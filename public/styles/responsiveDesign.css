@@ -1,0 +1,49 @@
+/* Smartphones: minimum width of 320px to maximum width of around 420px */
+@media only screen and (max-width: 767px) {
+  body nav {
+    background-color: lavender;
+    background-image: url("../images/black-thread-light.png");
+    position: relative;
+  }
+  body .container2 {
+    padding: 5 0;
+    width: 90%;
+    margin: 20px auto;
+  }
+  body .userProfile {
+    padding-top: 50px;
+    height: 450px;
+  }
+  body .logo {
+    -webkit-text-stroke: 1px black;
+    text-shadow: 1px 1px 2px black;
+  }
+  body .container1 {
+    text-shadow: 1px 1px 2px black;
+  }
+}
+/* Another tablet breakpoint is minimum width of 768px */
+@media only screen and (min-width: 768px) {
+  .container .userProfile {
+    padding: 20px;
+  }
+  nav {
+    background-color: #4056a1;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    column-gap: 50px;
+  }
+  .container .userProfile {
+    height: 550px;
+    margin-top: 200px;
+    width: 35%;
+    justify-content: center;
+  }
+  .container .container2 {
+    margin-top: 200px;
+    width: 65%;
+  }
+}
