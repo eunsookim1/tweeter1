@@ -7,7 +7,7 @@
 .buttonCounter {
   display: flex;
   justify-content: space-between;
-  font-family: 'Bungee';
+  font-family: "Bungee";
   border-top: 0.2em solid;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
@@ -15,7 +15,7 @@
 }
 
 .tweetSubmit {
-  background-color: #4056A1;
+  background-color: #4056a1;
   color: white;
   font-size: 0.8em;
 }
