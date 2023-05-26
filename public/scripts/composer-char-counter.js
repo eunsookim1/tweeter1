@@ -1,13 +1,7 @@
-// const countChar = function() {
-//   const len = $('text').val().length;
-//   $('#counter').text(len + ' characters');
-// };
-
 $("document").ready(function (e) {
   //Calls up when the DOM (document object model) is ready
   const maxChars = 140;
-  //alert("hello");
-
+  
   //TextBox Event
   // eslint-disable-next-line space-before-blocks
   $("#tweet-text").keypress(function (e) {
@@ -24,13 +18,3 @@ $("document").ready(function (e) {
     }
   });
 });
-
-// $("#tweet-text").on('click', function() {
-//   console.log(this); //The this keyword is a reference to the button
-// });
-// });
-
-// $("#tweet-text").on('click', () => {
-//   console.log(this); //The this keyword here refers to something else!
-// });
-// });
