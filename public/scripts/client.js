@@ -5,10 +5,10 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-$("document").ready(function () {
+$("document").ready(function() {
   $(".error-message").hide();
 
-  const renderTweets = function (tweets) {
+  const renderTweets = function(tweets) {
     $("#tweets-container").empty();
 
     for (const tweet of tweets) {
@@ -17,8 +17,8 @@ $("document").ready(function () {
     }
   };
 
-  const createTweetElement = function (tweet) {
-    const escape = function (str) {
+  const createTweetElement = function(tweet) {
+    const escape = function(str) {
       let div = document.createElement("div");
       div.appendChild(document.createTextNode(str));
       return div.innerHTML;
@@ -51,17 +51,19 @@ $("document").ready(function () {
   };
 
   // renderTweets(data);
-  const loadTweets = function () {
-    $.get("/tweets").then(function (data) {
+  const loadTweets = function() {
+    $.get("/tweets").then(function(data) {
       renderTweets(data);
     });
   };
 
-  $(".create-tweet").on("submit", function (event) {
+  $(".create-tweet").on("submit", function(event) {
     event.preventDefault();
+    $(".error-message").hide();
 
+    const newTweet = $("#tweet-text").val();
     // If the tweet input is empty
-    if ($("#tweet-text").val() === "" || $("#tweet-text").val() === null) {
+    if (newTweet === "" || newTweet === null) {
       if ($(".error-message").first().is(":hidden")) {
         return $(".error-message")
           .text("⚠️THE TWEET AREA IS EMPTY!⚠️")
@@ -70,26 +72,27 @@ $("document").ready(function () {
     }
 
     // When the tweet exceeds 140 chars
-    if ($("#tweet-text").val().length > 140) {
+    if (newTweet.length > 140) {
       if ($(".error-message").first().is(":hidden")) {
         return $(".error-message")
           .text("⚠️THE TWEET EXCEEDS 140 CHARACTER LIMIT!⚠️")
           .slideDown("slow");
       }
+    } else {
+      $.post("/tweets", $(".create-tweet").serialize()).then(() => {
+        $("#counter").text("140");
+        $(".error-message").hide();
+
+        $(this)
+          .find("input[type='text']")
+          .val(() => {
+            return $(this).attr("placeholder");
+          });
+        this.reset();
+
+        loadTweets();
+      });
     }
-
-    $.post("/tweets", $(".create-tweet").serialize()).then(() => {
-      $("#counter").text("140");
-
-      $(this)
-        .find("input[type='text']")
-        .val(() => {
-          return $(this).attr("placeholder");
-        });
-      this.reset();
-
-      loadTweets();
-    });
   });
 
   loadTweets();
