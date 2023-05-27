@@ -4,7 +4,7 @@ $("document").ready(function (e) {
   
   //TextBox Event
   // eslint-disable-next-line space-before-blocks
-  $("#tweet-text").keypress(function (e) {
+  $("#tweet-text").on('input', function (e) {
     let tweetText = $("#tweet-text").val();
     let totalChars = tweetText.length;
     let remainingChars = maxChars - totalChars;
